@@ -1,64 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Mateus Schverz - Portfolio</title>
-    <!-- Adicione links para seus estilos CSS, se houver -->
-    <!-- <link rel="stylesheet" href="styles.css"> -->
 </head>
-<body>
 
-    <header>
-        <h1>👨‍💻 Mateus Schverz</h1>
-        <p>Trabalho atualmente com programação Full Stack.</p>
-        <img src="https://github.com/matefs/matefs/assets/30128774/0ea0b6d3-eab9-4db3-b064-44f2e2c59a04" alt="LinkedIn cover">
+<body class="bg-gray-100 font-sans">
+
+    <!-- Header Section -->
+    <header class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto">
+            <img src="https://github.com/matefs/matefs/assets/30128774/0ea0b6d3-eab9-4db3-b064-44f2e2c59a04"
+                alt="LinkedIn Cover" class="w-full max-w-screen-lg mx-auto mb-4">
+            <h1 class="text-4xl font-bold">👨‍💻 Mateus Schverz</h1>
+            <p class="text-lg">Trabalho atualmente com programação Full Stack.</p>
+        </div>
     </header>
 
-    <section>
-        <h2>Sobre Mim</h2>
-        <p>Sou Mateus Schverz, um entusiasta da programação cursando Análise e Desenvolvimento de Sistemas. Com experiência em Quality Assurance e diversos projetos desenvolvidos, possuo habilidades tanto no frontend quanto no backend.</p>
-        <!-- Adicione mais informações sobre você conforme necessário -->
+    <!-- About Me Section -->
+    <section class="container mx-auto mt-8 p-4">
+        <h2 class="text-2xl font-bold mb-4">Sobre Mim</h2>
+        <p>Sou Mateus Schverz, um entusiasta da programação atualmente cursando Análise e Desenvolvimento de Sistemas.
+            Com experiência na área de Quality Assurance e diversos projetos desenvolvidos, tenho habilidades tanto no
+            frontend quanto no backend.</p>
+        <!-- Adicione mais informações sobre você aqui -->
     </section>
 
-    <section>
-        <h2>Projetos</h2>
+    <!-- Projects Section -->
+    <section class="container mx-auto mt-8 p-4">
+        <h2 class="text-2xl font-bold mb-4">🎁 Projetos</h2>
         <ul>
-            <li><a href="https://github.com/matefs/validador-de-arquivo-fiscal">Validador de Arquivo Fiscal</a></li>
-            <li><a href="https://github.com/matefs/next-empresa-generica">Next Empresa Genérica</a></li>
+            <!-- Adicione os links para seus projetos aqui -->
+            <li><a href="https://github.com/matefs/validador-de-arquivo-fiscal" class="text-blue-500">Validador de
+                    Arquivo Fiscal</a></li>
+            <li><a href="https://github.com/matefs/next-empresa-generica" class="text-blue-500">Next Empresa Genérica</a>
+            </li>
             <!-- Adicione mais projetos conforme necessário -->
         </ul>
     </section>
 
-    <section>
-        <h2>Artigos</h2>
+    <!-- Articles Section -->
+    <section class="container mx-auto mt-8 p-4">
+        <h2 class="text-2xl font-bold mb-4">Artigos</h2>
         <ul>
-            <li><a href="https://www.linkedin.com/pulse/explorando-o-poder-do-postman-funcionalidades-para-qas-mateus-schverz?trk=public_profile_article_view">Explorando o Poder do Postman: Funcionalidades para QAs e Desenvolvedores</a></li>
-            <li><a href="https://www.linkedin.com/pulse/como-automatizar-tarefas-repetitivas-seu-trabalho-mateus-schverz">Como automatizar tarefas repetitivas no seu trabalho</a></li>
+            <!-- Adicione os links para seus artigos aqui -->
+            <li><a href="https://www.linkedin.com/pulse/explorando-o-poder-do-postman-funcionalidades-para-qas-mateus-schverz?trk=public_profile_article_view"
+                    class="text-blue-500"><img src="https://www.seekpng.com/png/full/42-421000_open-fire-emoji-png.png"
+                        width="20" alt="new" /> Explorando o Poder do Postman: Funcionalidades para QAs e Desenvolvedores</a>
+            </li>
             <!-- Adicione mais artigos conforme necessário -->
         </ul>
     </section>
 
-    <section>
-        <h2>Vídeos</h2>
+    <!-- Videos Section -->
+    <section class="container mx-auto mt-8 p-4">
+        <h2 class="text-2xl font-bold mb-4">Vídeos</h2>
         <ul>
-            <li><a href="https://youtu.be/ffUJqdvk-kY">5 Passos para testar uma API com cypress</a></li>
+            <!-- Adicione os links para seus vídeos aqui -->
+            <li><a href="https://youtu.be/ffUJqdvk-kY" class="text-blue-500"><img
+                        src="https://www.seekpng.com/png/full/42-421000_open-fire-emoji-png.png" width="20" alt="new" /> 5
+                    Passos para testar uma API com cypress</a></li>
             <!-- Adicione mais vídeos conforme necessário -->
         </ul>
     </section>
 
-    <section>
-        <h2>Estatísticas do GitHub</h2>
-        <img src="https://github-readme-stats.vercel.app/api?username=matefs&theme=dark&show_icons=true&custom_title=Status%20do%20meu%20Github" alt="GitHub Stats">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=matefs&theme=dark&layout=compact&custom_title=Linguagens%20mais%20utilizadas:" alt="Top Languages">
+    <!-- GitHub Stats Section -->
+    <section class="container mx-auto mt-8 p-4">
+        <h2 class="text-2xl font-bold mb-4">GitHub Stats</h2>
+        <!-- Adicione a seção de estatísticas do GitHub aqui -->
+        <img src="https://github-readme-stats.vercel.app/api?username=matefs&theme=dark&show_icons=true&custom_title=Status%20do%20meu%20Github"
+            alt="GitHub Stats" class="mb-4">
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=matefs&theme=dark&layout=compact&custom_title=Linguagens%20mais%20utilizadas:"
+            alt="Top Languages" class="mb-4">
     </section>
 
-    <section>
-        <h2>Linguagens e Ferramentas</h2>
-        <!-- Adicione os ícones das suas linguagens e ferramentas favoritas conforme necessário -->
+    <!-- Languages and Tools Section -->
+    <section class="container mx-auto mt-8 p-4">
+        <h2 class="text-2xl font-bold mb-4">Linguagens e Ferramentas</h2>
+        <!-- Adicione os ícones das linguagens e ferramentas aqui -->
+        <p class="flex flex-wrap items-center">
+            <!-- Exemplo para uma ferramenta -->
+            <img src="https://www.chartjs.org/media/logo-title.svg" alt="chartjs" class="w-8 h-8 mr-4">
+            <!-- Adicione mais ícones conforme necessário -->
+        </p>
     </section>
-
-    <!-- Adicione mais seções conforme necessário -->
 
 </body>
+
 </html>

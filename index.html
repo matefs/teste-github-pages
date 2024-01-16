@@ -1,92 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style/tailwind.min.css" rel="stylesheet">
-    <title>Mateus Schverz - Portfolio</title>
+    <title>Matefs</title>
+    <link rel="icon" href="https://github.com/matefs.png" type="image/x-icon"/>
+    <script src="https://cdn.jsdelivr.net/npm/marked@2.0.0/marked.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/themes/prism-okaidia.css" rel="stylesheet"/>
+    <link href="style/index.css" rel="stylesheet"/>
+
 </head>
 
-<body class="bg-gray-100 font-sans">
+<body>
+<div class="container" id="content"></div>
 
-    <!-- Header Section -->
-    <header class="bg-blue-600 text-white p-4">
-        <div class="container mx-auto">
-            <img src="https://github.com/matefs/matefs/assets/30128774/0ea0b6d3-eab9-4db3-b064-44f2e2c59a04"
-                alt="LinkedIn Cover" class="w-full max-w-screen-lg mx-auto mb-4">
-            <h1 class="text-4xl font-bold">👨‍💻 Mateus Schverz</h1>
-            <p class="text-lg">Trabalho atualmente com programação Full Stack.</p>
-        </div>
-    </header>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        if (typeof marked === "function") {
+            fetch('https://raw.githubusercontent.com/matefs/matefs/main/README.md')
+                .then(response => response.text())
+                .then(data => {
+                    const readmeHtml = marked(data);
+                    const container = document.getElementById('content');
+                    container.innerHTML = readmeHtml;
+                    Prism.highlightAllUnder(container);
+                })
+                .catch(error => console.error("Oops:", error));
+        }
+    });
 
-    <!-- About Me Section -->
-    <section class="container mx-auto mt-8 p-4">
-        <h2 class="text-2xl font-bold mb-4">Sobre Mim</h2>
-        <p>Sou Mateus Schverz, um entusiasta da programação atualmente cursando Análise e Desenvolvimento de Sistemas.
-            Com experiência na área de Quality Assurance e diversos projetos desenvolvidos, tenho habilidades tanto no
-            frontend quanto no backend.</p>
-        <!-- Adicione mais informações sobre você aqui -->
-    </section>
+    window.addEventListener("scroll", function () {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            document.getElementById("clickme").style.display = "block";
+            document.getElementById("clickme").classList.add("animate-clickme");
+        }
+    });
 
-    <!-- Projects Section -->
-    <section class="container mx-auto mt-8 p-4">
-        <h2 class="text-2xl font-bold mb-4">🎁 Projetos</h2>
-        <ul>
-            <!-- Adicione os links para seus projetos aqui -->
-            <li><a href="https://github.com/matefs/validador-de-arquivo-fiscal" class="text-blue-500">Validador de
-                    Arquivo Fiscal</a></li>
-            <li><a href="https://github.com/matefs/next-empresa-generica" class="text-blue-500">Next Empresa Genérica</a>
-            </li>
-            <!-- Adicione mais projetos conforme necessário -->
-        </ul>
-    </section>
+</script>
 
-    <!-- Articles Section -->
-    <section class="container mx-auto mt-8 p-4">
-        <h2 class="text-2xl font-bold mb-4">Artigos</h2>
-        <ul>
-            <!-- Adicione os links para seus artigos aqui -->
-            <li><a href="https://www.linkedin.com/pulse/explorando-o-poder-do-postman-funcionalidades-para-qas-mateus-schverz?trk=public_profile_article_view"
-                    class="text-blue-500"><img src="https://www.seekpng.com/png/full/42-421000_open-fire-emoji-png.png"
-                        width="20" alt="new" /> Explorando o Poder do Postman: Funcionalidades para QAs e Desenvolvedores</a>
-            </li>
-            <!-- Adicione mais artigos conforme necessário -->
-        </ul>
-    </section>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/prism.js"></script>
 
-    <!-- Videos Section -->
-    <section class="container mx-auto mt-8 p-4">
-        <h2 class="text-2xl font-bold mb-4">Vídeos</h2>
-        <ul>
-            <!-- Adicione os links para seus vídeos aqui -->
-            <li><a href="https://youtu.be/ffUJqdvk-kY" class="text-blue-500"><img
-                        src="https://www.seekpng.com/png/full/42-421000_open-fire-emoji-png.png" width="20" alt="new" /> 5
-                    Passos para testar uma API com cypress</a></li>
-            <!-- Adicione mais vídeos conforme necessário -->
-        </ul>
-    </section>
-
-    <!-- GitHub Stats Section -->
-    <section class="container mx-auto mt-8 p-4">
-        <h2 class="text-2xl font-bold mb-4">GitHub Stats</h2>
-        <!-- Adicione a seção de estatísticas do GitHub aqui -->
-        <img src="https://github-readme-stats.vercel.app/api?username=matefs&theme=dark&show_icons=true&custom_title=Status%20do%20meu%20Github"
-            alt="GitHub Stats" class="mb-4">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=matefs&theme=dark&layout=compact&custom_title=Linguagens%20mais%20utilizadas:"
-            alt="Top Languages" class="mb-4">
-    </section>
-
-    <!-- Languages and Tools Section -->
-    <section class="container mx-auto mt-8 p-4">
-        <h2 class="text-2xl font-bold mb-4">Linguagens e Ferramentas</h2>
-        <!-- Adicione os ícones das linguagens e ferramentas aqui -->
-        <p class="flex flex-wrap items-center">
-            <!-- Exemplo para uma ferramenta -->
-            <img src="https://www.chartjs.org/media/logo-title.svg" alt="chartjs" class="w-8 h-8 mr-4">
-            <!-- Adicione mais ícones conforme necessário -->
-        </p>
-    </section>
 
 </body>
 
